@@ -14,7 +14,7 @@ TaskManagerApi/
 │   └── AppDbContext.cs      # EF Core DbContext
 ├── DTOs/
 │   └── TaskDtos.cs          # Request/response shapes
-├── Program.cs                # Entry point / configuration
+├── Program.cs               # Entry point / configuration
 ├── appsettings.json
 ├── TaskManagerApi.csproj
 ├── Dockerfile
