@@ -1,0 +1,38 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: task_mysql_csharp
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: taskdb
+      MYSQL_USER: taskuser
+      MYSQL_PASSWORD: taskpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build: .
+    container_name: task_api_csharp
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: taskuser
+      DB_PASSWORD: taskpassword
+      DB_NAME: taskdb
+    ports:
+      - "8000:8000"
+
+volumes:
+  mysql_data:
