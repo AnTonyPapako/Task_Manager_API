@@ -1,6 +1,48 @@
-# Task Management API — C# / ASP.NET Core
+# Task Management API
 
-A simple REST API for managing To-Do tasks, built with **C# (.NET 8), ASP.NET Core, and Entity Framework Core**, backed by **MySQL**, containerized with **Docker**, and ready for deployment to **AWS EC2**.
+A cloud-deployed RESTful API for task management built with ASP.NET Core, Entity Framework Core, MySQL and Docker.
+
+## Technologies
+
+- C#
+- ASP.NET Core 8
+- Entity Framework Core
+- MySQL
+- Docker
+- Docker Compose
+- AWS EC2
+- Swagger/OpenAPI
+- Git & GitHub
+
+## Features
+
+- Create tasks
+- Read tasks
+- Update tasks
+- Delete tasks
+- Persistent MySQL storage
+- Interactive Swagger documentation
+
+## Deployment
+
+The application is deployed on an AWS EC2 Ubuntu instance using Docker Compose.
+
+## Architecture
+```
+Client
+
+↓
+
+ASP.NET Core API
+
+↓
+
+Entity Framework Core
+
+↓
+
+MySQL
+```
 
 ## Project structure
 
