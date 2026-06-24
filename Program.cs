@@ -27,7 +27,7 @@ builder.Services.AddSwaggerGen(c =>
     {
         Title = "Task Management API",
         Version = "v1",
-        Description = "Ένα απλό REST API για διαχείριση εργασιών (To-Do Tasks)",
+        Description = "A simple REST API for task management and CRUD operations.",
     });
 });
 
