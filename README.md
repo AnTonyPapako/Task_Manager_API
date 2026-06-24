@@ -117,7 +117,6 @@ Same process regardless of language — Docker makes the platform language-agnos
 5. **Verify**: `http://<EC2_PUBLIC_IP>:8000/swagger`
 
 ## Production notes (suggested next steps)
-- Put Nginx as a reverse proxy in front of Kestrel + HTTPS (Let's Encrypt)
 - Use a managed database (AWS RDS) instead of a MySQL container for production
 - Store secrets (DB password) in AWS Secrets Manager instead of plain env vars
 - Set up CI/CD with GitHub Actions for auto-deploy on every push to `main`
