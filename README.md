@@ -2,6 +2,8 @@
 
 A cloud-deployed RESTful API for task management built with ASP.NET Core, Entity Framework Core, MySQL and Docker.
 
+**Status:** Successfully deployed on AWS EC2 using Docker Compose. 
+
 ## Technologies
 
 - C#
@@ -26,6 +28,18 @@ A cloud-deployed RESTful API for task management built with ASP.NET Core, Entity
 ## Deployment
 
 The application is deployed on an AWS EC2 Ubuntu instance using Docker Compose.
+
+## API Documentation
+
+The API is documented using Swagger/OpenAPI and provides an interactive interface for testing all endpoints.
+
+![Swagger UI](images/swagger-ui.png)
+
+## Live Demo
+
+Swagger UI available at:
+
+http://51.20.84.195:8000/swagger
 
 ## Architecture
 ```
@@ -158,7 +172,7 @@ Same process regardless of language — Docker makes the platform language-agnos
    ```
 5. **Verify**: `http://<EC2_PUBLIC_IP>:8000/swagger`
 
-## Production notes (suggested next steps)
+## Future Improvements (suggested next steps)
 - Use a managed database (AWS RDS) instead of a MySQL container for production
 - Store secrets (DB password) in AWS Secrets Manager instead of plain env vars
 - Set up CI/CD with GitHub Actions for auto-deploy on every push to `main`
